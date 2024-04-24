@@ -9,6 +9,7 @@ powershell Compress-Archive^
     -Force^
     -Path "../bin/BepInEx",^
           "../manifest.json",^
+          "../icon.png",^
           "../README.md",^
           "../LICENSE"^
     -DestinationPath "../bin/driftwood-yeet.zip"

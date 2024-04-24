@@ -1,14 +1,10 @@
 using BepInEx;
 using HarmonyLib;
-using GameNetcodeStuff;
 using GiantSpecimens.Enemy;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.IO;
 using System.Collections;
-using System;
-using BepInEx.Logging;
-using System.Linq.Expressions;
 
 namespace Yeet
 {
@@ -24,7 +20,7 @@ namespace Yeet
 
         void Awake()
         {
-            Plugin.Instance = this;
+            Instance = this;
             new Harmony(PluginId).PatchAll(typeof(PlayYeetSound));
         }
     }
@@ -53,8 +49,6 @@ namespace Yeet
         [HarmonyPatch(typeof(DriftwoodGiantAI), nameof(DriftwoodGiantAI.ThrowingPlayer))]
         static void Yeet(DriftwoodGiantAI __instance)
         {
-            Console.WriteLine("yeet.");
-            Console.WriteLine($"null: {YeetSFX == null}");
             __instance.creatureSFX.PlayOneShot(YeetSFX);
         }
     }
