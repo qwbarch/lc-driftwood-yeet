@@ -1,6 +1,6 @@
 {
     "name": "DriftwoodYeet",
-    "version_number": "1.0.0",
+    "version_number": "1.0.1",
     "website_url": "https://github.com/qwbarch/lc-driftwood-yeet",
     "description": "Play the YEET sound effect when the driftwood yeets a player.",
     "dependencies": [
